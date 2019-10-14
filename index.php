@@ -12,20 +12,21 @@
 
 
     <?php
-        $communityid = $_GET[user];
-        $mapname = $_GET[mapname];
-
-        $authserver = bcsub( $communityid, '76561197960265728' ) & 1;
-        //Get the third number of the steamid
-        $authid = ( bcsub( $communityid, '76561197960265728' ) - $authserver ) / 2;
-        //Concatenate the STEAM_ prefix and the first number, which is always 0, as well as colons with the other two numbers
-        $steamid = "STEAM_0:$authserver:$authid";
-
+    //Get the steamid (really the community id)
+    $communityid = $_GET["steamid"];
+    //Get the map name
+    $mapname = $_GET["mapname"];
+    //See if the second number in the steamid (the auth server) is 0 or 1. Odd is 1, even is 0
+    $authserver = bcsub($communityid, '76561197960265728') & 1;
+    //Get the third number of the steamid
+    $authid = (bcsub($communityid, '76561197960265728')-$authserver)/2;
+    //Concatenate the STEAM_ prefix and the first number, which is always 0, as well as colons with the other two numbers
+    $steamid = "STEAM_0:$authserver:$authid";
      ?>
 </head>
 
 <body>
-
+<div class="bg">
     <div class="row container">
         <div class="col s4">
             <div class="card medium white darken-4">
@@ -36,10 +37,6 @@
                             <tr>
                                 <td class="grey-text">SteamID:</td>
                                 <td><?php echo "$steamid";?></td>
-                            </tr>
-                            <tr>
-                                <td class="grey-text">Pointshop:</td>
-                                <td>133742069</td>
                             </tr>
                         </tbody>
                     </table>
@@ -69,19 +66,29 @@
                         <tbody>
                             <tr>
                                 <td>1:</td>
-                                <td>Soup</td>
+                                <td>Do not Random Death Match (RDM) fellow players</td>
                             </tr>
                             <tr>
                                 <td>2:</td>
-                                <td>Don't be a dickhead</td>
+                                <td>Do not ghost - Dead players are dead and shouldn't talk about what's going on. </td>
                             </tr>
                             <tr>
                                 <td>3:</td>
-                                <td>BOW DOWN TO THY SUPPERIOR LEADERS</td>
+                                <td>Don't go out and seek revenge just because of last round.</td>
                             </tr>
                             <tr>
                                 <td>4:</td>
-                                <td>Have a nice day</td>
+                                <td>Committing to traitorous activity makes you a traitor.</td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <td>5:</td>
+                                <td>Do not accuse people publicly in chat or over mic about RDM. Simply report it to admins on death.</td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <td>5:</td>
+                                <td>Have fun! - After all, it's just a game ;)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -130,6 +137,7 @@
 
         <div class="loading-bar card">
         </div>
+    </div>
     </div>
     </div>
 

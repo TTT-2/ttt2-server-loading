@@ -23,7 +23,8 @@
         this.$.mapPreview = document.getElementById('mappreview');
         this.$.serverName = document.getElementById('servername');
         this.$.mapName = document.getElementById('mapname');
-        this.$.playerSlots = document.getElementById('playerslots');
+
+
 
         this.updateProgress();
     };
@@ -57,7 +58,7 @@
 
         this.$.mapName.innerText = mapName;
         this.$.serverName.innerText = serverName;
-        this.$.playerSlots.innerText = maxPlayers + ' player slots';
+        document.getElementById("playerslots").innerHTML = maxPlayers + " Players"
     };
 
     /**

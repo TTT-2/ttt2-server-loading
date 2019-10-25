@@ -64,7 +64,7 @@
                                 <tr>
                                     <td class="grey-text">Gamemode:</td>
                                     <td>
-                                        <p>Town Of Terror 2</p>
+                                        <p>Trouble in Terrorist Town 2</p>
                                     </td>
                                 </tr>
                                 <tr>

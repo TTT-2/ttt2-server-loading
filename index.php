@@ -27,10 +27,25 @@
 <body>
 
     <div class="row container">
+            <div class="col s12">
+            <div class="card red">
+                <div class="card-stacked">
+                    <div  class="card-content black-text">
+                        <span class="card-title">Newest role: Pharaoh, Graverobber</span>
+                        <h4 class="card-title">Pharao (Team Innocent)</h4>
+<p>spawns in 50% of the rounds when at least 6 players are spawned
+has an „Ankh“ that can be placed anywhere on the ground
+if the graverobber stole his ankh, he can steal it back but the graverobber gets notified in the same way as he was previously</p>
+<h4 class="card-title">Graverobber (Team Traitor)</h4><p>
+As soon as an ankh is placed, one traitor gets converted to a graverobber can steal an Ankh to make it his own!
+</p>
+                    </div>
+                </div>
+            </div>
         <div class="col s4">
             <div class="card medium white darken-4">
                 <div class="card-content black-text">
-                    <span class="card-title">[PLAYERNAME]</span>
+                    <span class="card-title">PLAYERINFO</span>
                     <table class="">
                         <tbody>
                             <tr>
@@ -51,9 +66,8 @@
                                 <td><?php echo "$mapname";?></td>
                             </tr>
                             <tr>
-                                <td class="grey-text">Players:</td>
-                                <td id="">
-                                <p id="playerslots" class="player-slots"></p></td>
+                                <td class="grey-text">Max players:</td>
+                                <td>24</td>
                             </tr>
                         </tbody>
                     </table>
@@ -69,7 +83,7 @@
                         <tbody>
                             <tr>
                                 <td>1:</td>
-                                <td>Soup</td>
+                                <td>Only kill with certainty</td>
                             </tr>
                             <tr>
                                 <td>2:</td>
@@ -77,10 +91,14 @@
                             </tr>
                             <tr>
                                 <td>3:</td>
-                                <td>BOW DOWN TO THY SUPPERIOR LEADERS</td>
+                                <td>Admins and mods have the final saying</td>
                             </tr>
                             <tr>
                                 <td>4:</td>
+                                <td>Accept death. Nobody likes a crybaby...</td>
+                            </tr>
+                            <tr>
+                                <td>5:</td>
                                 <td>Have a nice day</td>
                             </tr>
                         </tbody>

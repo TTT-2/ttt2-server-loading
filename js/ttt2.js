@@ -1,11 +1,55 @@
-var randomrole1 = Math.floor(Math.random() * 27);
-var randomrole2 = Math.floor(Math.random() * 27);
+var rolecount = 28
+
+var randomrole1 = Math.floor(Math.random() * rolecount);
+var randomrole2 = Math.floor(Math.random() * rolecount);
 while (randomrole1 == randomrole2) {
-    randomrole2 = Math.floor(Math.random() * 27);
+    randomrole2 = Math.floor(Math.random() * rolecount);
     while (randomrole2 = 0) {
-        randomrole2 = Math.floor(Math.random() * 27);
+        randomrole2 = Math.floor(Math.random() * rolecount);
     }
 }
+
+
+//partner roles
+//Jackal - Sidekick
+var jackalid = 7
+var sidekickid = 17
+
+if (randomrole1 === jackalid || randomrole1 === sidekickid || randomrole2 === jackalid || randomrole2 === sidekickid) {
+    randomrole1 = jackalid
+    randomrole2 = sidekickid
+}
+
+
+//Sheriff - Deputy
+var sheriffid = 2
+var deputyid = 15
+
+if (randomrole1 === sheriffid || randomrole1 === deputyid || randomrole2 === sheriffid || randomrole2 === deputyid) {
+    randomrole1 = sheriffid
+    randomrole2 = deputyid
+}
+
+
+//Necro - Zombie
+var necroid = 10
+var zombieid = 25
+
+if (randomrole1 === necroid || randomrole1 === zombieid || randomrole2 === necroid || randomrole2 === zombieid) {
+    randomrole1 = necroid
+    randomrole2 = zombieid
+}
+
+
+//Pharaoh - Graverobber
+var phaid = 26
+var gravid = 27
+
+if (randomrole1 === phaid || randomrole1 === gravid || randomrole2 === phaid || randomrole2 === gravid) {
+    randomrole1 = phaid
+    randomrole2 = gravid
+}
+
 
 var rolename1 = "NOT DEFINED"
 var rolename2 = "NOT DEFINED"
@@ -141,11 +185,21 @@ if (randomrole1 < 1) {
     var rolename1 = "vampire"
     var rolecolor1 = "rgb(149, 43, 37)"
     var roledesc1 = "The vampire CAN'T access the shop, but he can transform into a pigeon.  To make it balanced, the Vampire needs to kill another player every minute. Otherwise, he will fall into Bloodlust. In Bloodlust, the Vampire loses 1 hp every 2 seconds."
-} else if (randomrole1 <= 26) {
+} else if (randomrole1 < 26) {
     //zombie
     var rolename1 = "zombie"
     var rolecolor1 = "rgb(68, 28, 44)"
     var roledesc1 = "Aaargh! You've been turned into a zombie and need to kill everyone else (Besides your boss of course...). ONWARD LITTLE ZOMBIE ARMY!"
+}else if (randomrole1 < 27) {
+    //Pharao
+    var rolename1 = "pharao"
+    var rolecolor1 = "rgb(170, 180, 10)"
+    var roledesc1 = "Spawns in 50% of the rounds when at least 6 players are present. He has an „Ankh“ that can be placed anywhere on the ground. If the Graverobber stole the Pharaos ankh, The Pharao can steal it back but the graverobber gets notified in the same way as he was previously"
+} else if (randomrole1 <= 28) {
+    //Graverobber
+    var rolename1 = "graverobber"
+    var rolecolor1 = "rgb(200, 100, 60)"
+    var roledesc1 = "As soon as an ankh is placed, one traitor gets converted to a graverobber can steal an Ankh to make it his own!"
 };
 
 
@@ -277,11 +331,21 @@ if (randomrole2 < 1) {
     var rolename2 = "vampire"
     var rolecolor2 = "rgb(149, 43, 37)"
     var roledesc2 = "The vampire CAN'T access the shop, but he can transform into a pigeon.  To make it balanced, the Vampire needs to kill another player every minute. Otherwise, he will fall into Bloodlust. In Bloodlust, the Vampire loses 1 hp every 2 seconds."
-} else if (randomrole2 <= 26) {
+} else if (randomrole2 < 26) {
     //zombie
     var rolename2 = "zombie"
     var rolecolor2 = "rgb(68, 28, 44)"
     var roledesc2 = "Aaargh! You've been turned into a zombie and need to kill everyone else (Besides your boss of course...). ONWARD LITTLE ZOMBIE ARMY!"
+} else if (randomrole2 < 27) {
+    //Pharao
+    var rolename2 = "pharao"
+    var rolecolor2 = "rgb(170, 180, 10)"
+    var roledesc2 = "Spawns in 50% of the rounds when at least 6 players are present. He has an „Ankh“ that can be placed anywhere on the ground. If the Graverobber stole the Pharaos ankh, The Pharao can steal it back but the graverobber gets notified in the same way as he was previously"
+} else if (randomrole2 <= 28) {
+    //Graverobber
+    var rolename2 = "graverobber"
+    var rolecolor2 = "rgb(200, 100, 60)"
+    var roledesc2 = "As soon as an ankh is placed, one traitor gets converted to a graverobber can steal an Ankh to make it his own!"
 };
 
 document.getElementById("classicon1").src = "img/classes/"+rolename1+".png";

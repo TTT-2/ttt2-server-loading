@@ -12,8 +12,8 @@
 
 
     <?php
-        $communityid = $_GET[user];
-        $mapname = $_GET[mapname];
+        $communityid = $_GET["user"];
+        $mapname = $_GET["mapname"];
 
         $authserver = bcsub( $communityid, '76561197960265728' ) & 1;
         //Get the third number of the steamid
